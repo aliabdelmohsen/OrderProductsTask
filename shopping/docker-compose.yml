@@ -1,0 +1,6 @@
+services:
+  accounts:
+    image: "aliabdelmohsen1/shopping:latest"
+    container_name: shopping-container
+    ports:
+    - "9090:9090"
