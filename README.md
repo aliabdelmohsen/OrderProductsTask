@@ -32,3 +32,17 @@ To build and run the project, follow these steps:
 
 -> The application will be available at http://localhost:9090.
 
+## Swagger
+
+* http://localhost:9090/swagger-ui/index.html
+
+# H2_console
+
+ * http://localhost:9090/h2-console/login.jsp
+ * username: sa
+
+ * 
+## postman collection
+
+* you need to import OrderPostManCollection.postman_collection.json into postman
+* you need to add environment Shop_Local.postman_environment.json 
