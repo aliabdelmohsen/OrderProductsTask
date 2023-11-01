@@ -1,8 +1,8 @@
 package com.qeema.shopping.service;
 
 import com.qeema.shopping.exception.BusinessException;
-import com.qeema.shopping.model.Order;
-import com.qeema.shopping.model.OrderData;
+import com.qeema.shopping.model.order.Order;
+import com.qeema.shopping.model.order.OrderData;
 import com.qeema.shopping.model.OrderProduct;
 import com.qeema.shopping.model.Product;
 import com.qeema.shopping.repository.OrderDataRepository;
@@ -79,7 +79,7 @@ public class OrderService {
                 .stream()
                 .map(OrderProductRequest::getProductId).collect(Collectors.toSet());
         if (orderProducts.size() != orderProductIdSet.size()) {
-            throw new BusinessException(messageSource.getMessage("Order.PRODUCT.UNIQUENESS", null, Locale.US));
+            throw new BusinessException(messageSource.getMessage("Order.PRODUCT_UNIQUENESS", null, Locale.US));
         }
     }
 }

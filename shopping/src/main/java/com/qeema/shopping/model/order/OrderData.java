@@ -1,4 +1,4 @@
-package com.qeema.shopping.model;
+package com.qeema.shopping.model.order;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

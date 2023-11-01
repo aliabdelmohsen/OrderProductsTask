@@ -1,6 +1,6 @@
 package com.qeema.shopping.response;
 
-import com.qeema.shopping.model.OrderData;
+import com.qeema.shopping.model.order.OrderData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

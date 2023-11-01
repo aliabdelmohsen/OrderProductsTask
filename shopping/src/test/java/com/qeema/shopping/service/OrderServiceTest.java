@@ -6,7 +6,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import com.qeema.shopping.exception.BusinessException;
-import com.qeema.shopping.model.Order;
+import com.qeema.shopping.model.order.Order;
 import com.qeema.shopping.model.Product;
 import com.qeema.shopping.repository.OrderDataRepository;
 import com.qeema.shopping.repository.OrderRepository;
@@ -18,8 +18,6 @@ import java.math.BigDecimal;
 
 import java.util.ArrayList;
 import java.util.Optional;
-
-import org.junit.jupiter.api.Disabled;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

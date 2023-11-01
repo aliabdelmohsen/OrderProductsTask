@@ -1,5 +1,6 @@
 package com.qeema.shopping.model;
 
+import com.qeema.shopping.model.order.Order;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;

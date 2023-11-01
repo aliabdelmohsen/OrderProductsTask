@@ -3,6 +3,7 @@ package com.qeema.shopping.exception;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -25,6 +26,13 @@ public class ApiExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ErrorResponse> handleBusinessException(BusinessException ex) {
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        ErrorResponse errorResponse =
+                new ErrorResponse(httpStatus, ex.getMessage(), LocalDateTime.now());
+        return new ResponseEntity<>(errorResponse, httpStatus);
+    }
+    @ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<ErrorResponse> handleBadCredentialsException(BadCredentialsException ex) {
+        HttpStatus httpStatus = HttpStatus.UNAUTHORIZED;
         ErrorResponse errorResponse =
                 new ErrorResponse(httpStatus, ex.getMessage(), LocalDateTime.now());
         return new ResponseEntity<>(errorResponse, httpStatus);

@@ -1,5 +1,6 @@
-package com.qeema.shopping.model;
+package com.qeema.shopping.model.order;
 
+import com.qeema.shopping.model.OrderProduct;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
