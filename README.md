@@ -1,12 +1,12 @@
 # OrderProductsTask
 This project demonstrates the implementation of the Ordering Task:
 
-Features
-User registration and login with JWT authentication
-Password encryption using BCrypt
-Customized access denied handling
+##Features
+* User registration and login with JWT authentication
+* Password encryption using BCrypt
+* Customized access denied handling
 
-Technologies
+##Technologies
 Spring Boot 3.0.1
 Spring Security
 JSON Web Tokens (JWT)
